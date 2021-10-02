@@ -1,0 +1,90 @@
+<html>
+<head>
+<style>
+.button{
+display:inline-block;
+margin:5% 20px;
+padding:2px 0px;
+text-align:center;
+font-family:montserrat-Regular;
+position:relative;
+background:#094a89;
+color:white;
+text-decoration:none;
+width:180px;
+font-size:24px;
+}
+.name{
+
+color:black
+}
+.res-tab{
+overflow-x:auto;
+}
+h1{
+font-style:italic;
+text-align:center;
+color:#094a89;
+}
+table{
+border-collapse:collapse;
+
+font-size:18px;
+font-style:italic;
+text-align:center;
+}
+th{
+background-color:#094a89;
+color:white;
+}
+th,td{
+border:2px solid #ddd;
+padding:15px;
+}
+a{
+color:white;
+text-decoration:none;
+}
+a:hover{
+background:green;
+}
+.date{
+background:white;
+color:black
+</style>
+</head>
+<body>
+<center
+<div class"res-tab">
+<table>
+<tr>
+<th><a href="weather\microparameter.html" target="weatherdetails"> <b> Micro-Prameters Historical Trends</b></a> </th>
+<th><a href="weather\macroparameter.html" target="weatherdetails" ><b> Macro-Paramters Historical Trends </b></a></th>
+<th><a href="weather\weatherforecast.html" target="weatherdetails"><b> Weather Forecast</b></a></th>
+<th><a href="weather\subspray.html"target="weatherdetails"> <b> Spray </b></a></th>
+<th><a href="weather\subirrigation.html"target="weatherdetails"><b> Irrigation  </b></a></th>
+<th class="date"> <b> Today's Date is:  <p id="demo" > </p> </b></th>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+var today=new Date();
+var dd=today.getDate();
+var mm=today.getMonth()+1;
+var yyyy=today.getFullYear();
+if(dd<10)
+{
+dd='0'+dd;
+}
+if(mm<10)
+{
+mm='0'+mm;
+}
+console.log(today);
+today=dd+'-'+mm+'-'+yyyy;
+document.getElementById("demo").innerHTML=today;
+</script>
+</body>
+<center>
+</html>
+
