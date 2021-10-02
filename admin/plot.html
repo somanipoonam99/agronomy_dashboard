@@ -1,6 +1,5 @@
 <html>
 <head>
-<script type="text/javascript" src="js\farmer.js"> </script>
 <style>
 
 .button{
@@ -16,11 +15,10 @@ text-decoration:none;
 width:180px;
 font-size:24px;
 }
-.name{
+.button{
 
-color:black
 }
-.farmer{
+.res-tab{
 overflow-x:auto;
 }
 h1{
@@ -47,34 +45,22 @@ padding:15px;
 </head>
 <body>
 <center>
-<div class"farmer">
-<h1>Farmer Details</h1>
+<div class="res-tab">
+<h1>Plot Related Details</h1>
 <table border="1">
 <tr>
-<th>Farmer Id </th>
-<th>Farmer Name </th>
-<th>Phone Number </th>
-<th>Address 1</th>
-<th> Address 2</th>
-<th>city </th>
-<th>state </th>
-<th>zip </th>
-</tr>
-<tr>
-<td>100101</td>
-<td> <a href="plot.html" class="name"> Manish chopda </a></td>
-<td> +919474684583</td>
-<td> nashik</td>
-<td> pimpagoan</td>
-<td> Nashik </td>
-<td> Maharashtra</td>
-<td>422306</td>
+<th>Plot Id </th>
+<th>Plot Geo Location </th>
+<th>Crop Name </th>
+<th>Variety</th>
+<th> Foundation Pruning Date</th>
+<th>Fruit Pruning Date</th>
+<th>Irrigation Type</th>
+<th>Target Market</th>
 </tr>
 </table>
 </div>
-<div>
-<a href="new data\addfarmer.html" class="button"> Add New Farmer</a>
-</div>
+<a href="new data\addplot.html" class="button"> Add Plot</a>
 </body>
 <center>
 </html>
