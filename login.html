@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Precify Login page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cont">
+    <div class="form sign-in">
+      <h2>LOG IN</h2>
+      <label>
+        <span>Emaild Id </span>
+        <input type="email" placeholder="test@gmail.com" name="number" id="email_field" required>
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" id="password_field" required>
+      </label>
+       <button class="submit" type="button" onclick="login()"> LOG IN</button>
+      <p class="forgot-pass">Forgot Password ?</p>
+    </div>
+
+    <div class="sub-cont">        
+      <div class="img">
+        <div class="img-text m-up">
+<h1> welcome</h1>
+          <h2>New here?</h2>
+          <p>LOG IN and discover great amount of new opportunities!</p>
+            <p> PRECIFY</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>Already have account</h2>
+
+        </div>
+        <div class="img-btn">
+          <span class="m-up">NEW USER</span>
+          <span class="m-in">LOG IN</span>
+        </div>
+      </div>
+      <div class="form sign-up">
+        <h2>Create new account</h2>
+        <label>
+          <span>Name</span>
+          <input type="text">
+        </label>
+          <label>
+          <span>Mobile NO</span>
+          <input type="number">
+        </label>
+              <label>
+          <span>Address</span>
+          <input type="textarea">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password">
+        </label>
+        <label>
+          <span>Confirm Password</span>
+          <input type="password">
+        </label>
+        <a  href="dashboardpage.html"> <button type="button" class="submit">LOG IN NOW</button></a>
+      </div>
+    </div>
+  </div>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+<script>
+var firebaseConfig = {
+    apiKey: "AIzaSyBTfOJhkpLXp_9YvQ4csX79I0iE09YboHU",
+    authDomain: "dev-precify.firebaseapp.com",
+    databaseURL: "https://dev-precify.firebaseio.com",
+    projectId: "dev-precify",
+    storageBucket: "dev-precify.appspot.com",
+    messagingSenderId: "692134790724",
+    appId: "1:692134790724:web:2b26fe30c67cd5de849e11",
+    measurementId: "G-ZTPGCRJFZ0"
+  };
+
+   firebase.initializeApp(firebaseConfig);
+      
+function login(){
+alert("welcome");
+  var userEmail = document.getElementById("email_field").value;
+  var userPass = document.getElementById("password_field").value;
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+
+    window.alert("Error : " + errorMessage);
+
+    // ...
+  });
+
+ alert( "Welcome User : " + userEmail);
+    }
+</script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
